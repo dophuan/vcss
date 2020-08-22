@@ -1,0 +1,35 @@
+{
+  "name": "vcss",
+  "version": "0.0.1",
+  "description": "My preprocessor practice",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dophuan/vcss.git"
+  },
+  "keywords": [
+    "css",
+    "parser",
+    "preprocessor",
+    "stylesheets"
+  ],
+  "author": "Do Phu An",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dophuan/vcss/issues"
+  },
+  "homepage": "https://github.com/dophuan/vcss#readme",
+  "devDependencies": {
+    "eslint": "^7.7.0"
+  },
+  "dependencies": {
+    "css": "^3.0.0"
+  }
+}
