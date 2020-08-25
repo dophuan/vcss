@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,11 @@
     "eslint": "^7.7.0"
   },
   "dependencies": {
-    "css": "^3.0.0"
+    "@ando105/ast-css-iter": "^1.0.0",
+    "chai": "^4.2.0",
+    "css": "^3.0.0",
+    "express": "^4.17.1",
+    "mocha": "^8.1.1",
+    "request": "^2.88.2"
   }
 }
