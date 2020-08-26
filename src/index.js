@@ -22,6 +22,14 @@ const Banana = (config) => {
                 if (config.position || config.position === undefined) {
                     require('../src/core/position.js')(rule)
                 }
+
+                if (config.size || config.size === undefined) {
+                    require('../src/core/size.js')(rule)
+                }
+
+                if (config.text || config.text === undefined) {
+                    require('../src/core/text.js')(rule)
+                }
             })
             return css.stringify(ast, { compress: config.compress })
 
