@@ -23,16 +23,16 @@ const position = (rule) => {
                 }
                 break
             case 2:
-                rule.addDeclaration('left', second, index)
-                rule.addDeclaration('bottom', first, index)
-                rule.addDeclaration('right', second, index)
                 rule.addDeclaration('top', first, index)
+                rule.addDeclaration('right', second, index)
+                rule.addDeclaration('bottom', first, index)
+                rule.addDeclaration('left', second, index)
                 break
             case 3:
-                rule.addDeclaration('left', second, index)
-                rule.addDeclaration('bottom', third, index)
-                rule.addDeclaration('right', second, index)
                 rule.addDeclaration('top', first, index)
+                rule.addDeclaration('right', second, index)
+                rule.addDeclaration('bottom', third, index)
+                rule.addDeclaration('left', second, index)
                 break
             case 4:
                 rule.addDeclaration('left', fourth, index)
