@@ -4,21 +4,29 @@ const css = require('css')
 const astIter = require('@ando105/ast-css-iter')
 
 const Banana = (config) => {
-  return {
-    render: (stylesheet, inputPath = 'fake_path') => {
-      const ast = css.parse(stylesheet)
+    return {
+        render: (stylesheet, inputPath = 'fake_path') => {
+            const ast = css.parse(stylesheet)
 
-      astIter(ast)
+            astIter(ast)
 
-      ast.getAllRulesByType('rule', (rule) => {
-        if (config.align || config.align === undefined) {
-          require('../src/core/align.js')(rule)
+            ast.getAllRulesByType('rule', (rule) => {
+                if (config.align || config.align === undefined) {
+                    require('../src/core/align.js')(rule)
+                }
+
+                if (config.box || config.box === undefined) {
+                    require('../src/core/box.js')(rule)
+                }
+
+                if (config.position || config.position === undefined) {
+                    require('../src/core/position.js')(rule)
+                }
+            })
+            return css.stringify(ast, { compress: config.compress })
+
         }
-      })
-      return css.stringify(ast, {compress: config.compress})
-
     }
-  }
 
 }
 
