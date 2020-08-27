@@ -30,6 +30,10 @@ const Banana = (config) => {
                 if (config.text || config.text === undefined) {
                     require('../src/core/text.js')(rule)
                 }
+
+                if (config.func || config.func === undefined) {
+                    require('../src/core/func.js')(rule)
+                }
             })
             return css.stringify(ast, { compress: config.compress })
 
