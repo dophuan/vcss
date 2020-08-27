@@ -17,6 +17,21 @@ const Banana = (config) => {
                 }
             })
 
+            ast.getAllRulesBySelector(':root', (rule, index) => {
+                if (config.variable || config.variable === undefined) {
+                    require('../src/core/var.js')(ast, rule, index)
+                }
+            })
+
+            ast.backwardRulesTracer((rule, index) => {
+                const isFunction = /\@function\ /.test(rule.selectors);
+                if (isFunction) {
+                    if (config.function || config.function === undefined) {
+                        require('../src/core/func.js')(rule, ast, index)
+                    }
+                }
+            })
+
             ast.getAllRulesByType('rule', (rule) => {
                 if (config.align || config.align === undefined) {
                     require('../src/core/align.js')(rule)
