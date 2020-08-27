@@ -2,7 +2,7 @@ const position = (rule) => {
     rule.findDeclarationsByProperty('position', (declaration, index) => {
         rule.removeDeclaration(index)
 
-        const params = declaration.value.split(' ')
+        const params = declaration.getAllParams()
         const first = declaration.getParam(0)
         const second = declaration.getParam(1)
         const third = declaration.getParam(2)
