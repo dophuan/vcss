@@ -10,3 +10,5 @@ require('./imports.test')
 require('./row.test')
 require('./col.test')
 require('./variable.test')
+
+require('./fullRender.test')

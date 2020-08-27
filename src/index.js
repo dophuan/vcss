@@ -53,8 +53,20 @@ const Banana = (config) => {
                     require('../src/core/text.js')(rule)
                 }
 
-                if (config.func || config.func === undefined) {
-                    require('../src/core/func.js')(rule)
+                if (config.row || config.row === undefined) {
+                    require('../src/core/row.js')(rule)
+                }
+
+                if (config.col || config.col === undefined) {
+                    require('../src/core/col.js')(rule)
+                }
+
+                if (config.height || config.height === undefined) {
+                    require('../src/core/height.js')(rule)
+                }
+
+                if (config.width || config.width === undefined) {
+                    require('../src/core/width.js')(rule)
                 }
             })
             return css.stringify(ast, { compress: config.compress })
