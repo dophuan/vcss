@@ -7,7 +7,7 @@ const variable = (ast, rule, index) => {
 
     ast.removeRule(index)
 
-    ast.findAllDeclarations((declaration) => {
+    ast.getAllDeclarations((declaration) => {
 
         const isVariable = /var\(/.test(declaration.value)
 
