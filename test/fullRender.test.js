@@ -10,7 +10,7 @@ config.align = true
 config.width = true
 config.height = true
 
-const banana = require('../src/index.js')(config)
+const vcss = require('../src/index.js')(config)
 
 describe('render()', () => {
 
@@ -19,7 +19,7 @@ describe('render()', () => {
     const stylesheet = '.test {color:#000; size: 50px 100px;}' +
       '.b {color:#000; position: 10px 5px 8px 90px; margin: 10px;}'
 
-    const result = banana.render(stylesheet, 'test.vcss')
+    const result = vcss.render(stylesheet, 'test.vcss')
 
     const expect = '.test {\n  color: #000;\n  width: 50px;\n' +
       '  height: 100px;\n}\n\n.b {\n  color: #000;\n' +

@@ -1,6 +1,6 @@
 {
-  "name": "vcss",
-  "version": "0.0.1",
+  "name": "@ando105/vcss",
+  "version": "1.0.0",
   "description": "My preprocessor practice",
   "main": "src/index.js",
   "directories": {
