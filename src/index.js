@@ -10,6 +10,13 @@ const Banana = (config) => {
 
             astIter(ast)
 
+            ast.getImports((urlForImport, index) => {
+                if (config.imports || config.imports === undefined) {
+                    const imports = require('../src/core/imports.js')
+                    imports(urlForImport, ast, index, inputPath)
+                }
+            })
+
             ast.getAllRulesByType('rule', (rule) => {
                 if (config.align || config.align === undefined) {
                     require('../src/core/align.js')(rule)
