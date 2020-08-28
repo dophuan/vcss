@@ -34,7 +34,7 @@
     "path": "^0.12.7"
   },
   "dependencies": {
-    "@ando105/ast-css-iter": "^1.0.2",
+    "@ando105/ast-css-iter": "^1.0.4",
     "chokidar": "^3.4.2",
     "commander": "^6.1.0",
     "chai": "^4.2.0",

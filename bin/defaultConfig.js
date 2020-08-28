@@ -14,5 +14,6 @@ config.box = true
 config.function = true
 config.text = true
 config.compress = false
+config.font = true
 
 module.exports = config

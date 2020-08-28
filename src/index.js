@@ -68,6 +68,10 @@ const vc = (config) => {
                 if (config.width || config.width === undefined) {
                     require('../src/core/width.js')(rule)
                 }
+
+                if (config.font || config.font === undefined) {
+                    require('../src/core/font.js')(rule)
+                }
             })
             return css.stringify(ast, { compress: config.compress })
 

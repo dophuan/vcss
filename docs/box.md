@@ -1,4 +1,4 @@
-# align
+# box
 
 ## Summary
 The `box` property provides a simple abstraction for the box model.

@@ -12,5 +12,6 @@
 	"box" : true,
     "function" : true,
     "text": true,
-	"compress" : false
+	"compress" : false,
+	"font": true
 }
