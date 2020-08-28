@@ -3,7 +3,7 @@
 const css = require('css')
 const astIter = require('@ando105/ast-css-iter')
 
-const Banana = (config) => {
+const vc = (config) => {
     return {
         render: (stylesheet, inputPath = 'fake_path') => {
             const ast = css.parse(stylesheet)
@@ -76,4 +76,4 @@ const Banana = (config) => {
 
 }
 
-module.exports = Banana
+module.exports = vc
