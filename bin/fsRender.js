@@ -39,10 +39,11 @@ const fsRender = (inputPath, outputPath, log = 'Your file has been' +
 
             const vc = require('../src/index.js')(config)
             const cssStylesheet = vc.render(vcssStylesheet, inputPath)
-
-            fs.writeFile(outputPath, cssStylesheet)
+            fs.writeFile(outputPath, cssStylesheet, function (err) {
+                if (err) throw err
+                console.log('Saved!')
+            })
             console.log(log)
-
         })
 
     })
