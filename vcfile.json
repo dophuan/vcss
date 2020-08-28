@@ -1,0 +1,16 @@
+{
+	"size" : true,
+	"position" : true,
+	"gradient" : false,
+	"variable" : true,
+	"imports" : true,
+	"align" : true,
+	"width" : true,
+	"height" : true,
+	"col" : true,
+	"row" : true,
+	"box" : true,
+    "function" : true,
+    "text": true,
+	"compress" : false
+}

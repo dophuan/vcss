@@ -1,8 +1,11 @@
 {
   "name": "@ando105/vcss",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "My preprocessor practice",
   "main": "src/index.js",
+  "bin": {
+    "vcss": "bin/index.js"
+  },
   "directories": {
     "doc": "docs",
     "test": "test"
@@ -27,13 +30,17 @@
   },
   "homepage": "https://github.com/dophuan/vcss#readme",
   "devDependencies": {
-    "eslint": "^7.7.0"
+    "eslint": "^7.7.0",
+    "path": "^0.12.7"
   },
   "dependencies": {
     "@ando105/ast-css-iter": "^1.0.2",
+    "chokidar": "^3.4.2",
+    "commander": "^6.1.0",
     "chai": "^4.2.0",
     "css": "^3.0.0",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "mocha": "^8.1.1",
     "request": "^2.88.2"
   }
