@@ -1,7 +1,7 @@
 const assert = require('assert')
 const css = require('css')
 const addIterations = require('@ando105/ast-css-iter')
-const bnnRow = require('../src/core/row.js')
+const row = require('../src/core/row.js')
 
 describe('row()', () => {
     it('Should return a centered responsive flex container.', () => {
@@ -10,7 +10,7 @@ describe('row()', () => {
         addIterations(ast)
 
         ast.stylesheet.rules.forEach((rule) => {
-            if (rule.selectors) bnnRow(rule)
+            if (rule.selectors) row(rule)
         })
 
         const result = css.stringify(ast)

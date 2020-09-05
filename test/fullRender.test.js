@@ -3,7 +3,6 @@ const assert = require('assert')
 const config = {}
 config.size = true
 config.position = true
-// config.bnnGradient = true;
 config.variable = true
 config.imports = true
 config.align = true
